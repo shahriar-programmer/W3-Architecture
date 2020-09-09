@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    position: relative;
+}
+
+.header{
+    margin-bottom: 60px;
+}
+
+.banner{
+    height: 95vh;
+    background-image: url(../img/architect.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 8vh;
+}
+
+.banner_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+
+.banner_span{
+    background-color: rgba(0, 0, 0, 0.692);
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    color: rgba(255, 255, 255, 0.945);    
+}
+
+.full_navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 8vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    /* overflow: hidden; */
+    z-index: 100;
+}
+
+.logo_text{
+    font-size: 18px;    
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+.logo_span{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav ul{
+    list-style-type: none;
+}
+
+.nav li{
+    display: inline-block;
+    text-align: center;
+}
+
+.nav li a{
+    padding: 0 10px;
+    letter-spacing: 4px;
+}
+
+.nav li:hover{
+    transition: all .5s;
+    background-color: rgba(128, 128, 128, 0.397);
+    padding: 6px 10px;
+}
+
+.clear{
+    content: "";
+    clear: both;
+}
+
+section{
+    padding: 60px;
+    position: relative;
+    /* height: 100vh; */
+}
+
+.hr{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.projects-div{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-column: auto;
+}
+
+.project-box{
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+    position: relative;
+}
+
+.box-1, .box-7{
+    background-image: url(../img/house2.jpg);
+}
+
+.box-2, .box-8{
+    background-image: url(../img/house3.jpg);
+}
+
+.box-3, .box-5{
+    background-image: url(../img/house4.jpg);
+}
+
+.box-4, .box-6{
+    background-image: url(../img/house5.jpg);
+}
+
+.box-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 6px 10px;
+}
+
+.about-heading{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.about-div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about img{
+    width: 100%;
+    margin-bottom: 20px;
+    filter: grayscale(70%);
+}
+
+.about-box{
+    width: 24%;
+}
+
+.name, .tag, .about-text{
+    margin-bottom: 20px;
+}
+
+.contact-btn{
+    display: inline-block;
+    margin-top: 10px;
+    background-color: gray;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.contact{
+    height: 55vh;
+    margin-bottom: 40px;
+}
+
+.contact-heading{
+    margin-bottom: 30px;
+}
+
+input:not(:last-child){
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+input:last-child{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 26px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: block;
+}
+
+.map{
+    padding: 100px 60px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.map img{
+    width: 100%;
+}
+
+.footer p{
+    background-color: black;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 993px){
+
+    .projects-div{
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .about-box{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .banner_span_other{
+        display: none;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .projects-div{
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .about-box{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .project-box{
+        height: 350px;
+    }
+    .projects-div{
+        grid-template-columns: 100%;
+    }
+
+    .about-box{
+        width: 100%;
+    }
+}
